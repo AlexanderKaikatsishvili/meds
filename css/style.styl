@@ -1,0 +1,583 @@
+/* VARIABLES */
+
+$vivid-red-color = #FA1616
+$white-color = #fff
+$chinese-silver-color = #C8C8C8
+$tiffany-blue-color = #0FABBC
+$dark-charcoal-color = #333
+$bubbles-color = #E4F9FF
+$lotion-color = #FAFAFA
+$quick-silver-color = #A7A7A7
+$cultured-color = #F4F4F4
+
+
+/* DEFAULT STYLES */
+
+html,
+body
+  font 14px / 1.2 'Montserrat', sans-serif
+  color $dark-charcoal-color
+
+select
+  padding-right .8rem
+  border none
+  font-weight 300
+  -moz-appearance none
+  -webkit-appearance none
+  appearance none
+  cursor pointer
+  background url("../img/arrow.svg") 100% 50% no-repeat
+
+hr
+  margin 1.8rem 0
+
+input[type=search]
+  outline none
+
+:focus-visible
+  outline none
+
+
+// Custom scrollbar
+
+::-webkit-scrollbar
+  width 20px
+  height 20px
+
+::-webkit-scrollbar-button
+  width 0
+  height 0
+
+::-webkit-scrollbar-thumb
+  background $quick-silver-color
+  border 5px solid $lotion-color
+  border-radius 10px
+
+::-webkit-scrollbar-thumb:hover
+  background $quick-silver-color
+
+::-webkit-scrollbar-thumb:active
+  background $quick-silver-color
+
+::-webkit-scrollbar-track
+  background $lotion-color
+  border 0 none $white-color
+  border-radius 0
+
+::-webkit-scrollbar-track:hover
+  background $lotion-color
+
+::-webkit-scrollbar-track:active
+  background $lotion-color
+
+::-webkit-scrollbar-corner
+  background transparent
+
+.link
+  text-decoration none
+  color $dark-charcoal-color
+
+  &:hover
+    color $dark-charcoal-color
+
+  &-instagram
+    margin-right 1.5rem
+
+  &-facebook
+    margin-right 3.4rem
+
+.btn
+  background-color transparent
+  padding .4rem 1.2rem
+  border none
+  transition all .2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+  &-primary
+    border-radius 5px
+    color $white-color
+    background-color $vivid-red-color
+    border 1px solid transparent
+
+    &:hover
+      color $vivid-red-color
+      background-color transparent
+      border-color $vivid-red-color
+
+  &-secondary
+    font-weight 500
+    color $vivid-red-color
+    border 1px solid $vivid-red-color
+    border-radius 5px
+
+    &:hover
+      color $white-color
+      background-color $vivid-red-color
+
+  &-xl
+    padding 1rem 2rem
+    width 330px
+    max-width 100%
+    font-size 18px
+
+  &-filter
+    padding-left 1.7rem
+    background url("../img/filter.svg") 0 50% no-repeat
+
+  &-login
+    padding-left 2.6rem
+    font-weight 300
+    background url("../img/enter.svg") 0 50% no-repeat
+
+  &-signup
+    padding-left 2.6rem
+    margin-right .9rem
+    font-weight 300
+    background url("../img/user.svg") 0 50% no-repeat
+
+  &-menu
+    padding 0
+    border-radius 50%
+    width 30px
+    height 30px
+    display none
+
+  &-sorting
+    display none
+    margin-left auto
+    padding-left 1.5rem
+    font-weight 300
+    background url("../img/sort.svg") 0 50% no-repeat
+
+
+/* LAYOUT STYLES */
+
+.page-container
+  margin-top 150px
+  margin-left 300px
+
+.header
+  position fixed
+  width calc(100% - 300px)
+  margin-left 300px
+  top 0
+  z-index 1000
+  background-color $white-color
+  padding 2.1rem 1rem 1rem
+
+  &-top
+    min-height 30px
+    display flex
+    align-items center
+    justify-content space-between
+    margin-bottom 2rem
+
+.page
+  position relative
+  padding 1rem
+  min-height calc(100vh - 126px)
+
+.footer
+  background-color $cultured-color
+  margin-left 300px
+  padding 1rem 2.5rem
+  display flex
+  align-items center
+  font-size 16px
+
+  .link
+    margin-left 2.7rem
+
+  .btn-primary
+    margin-left auto
+
+
+/* DRAWER STYLES */
+
+.logo
+  margin-bottom 3.9rem
+
+.auth-block
+  display flex
+  align-items center
+  margin-bottom 1.9rem
+
+.search-input
+  font-weight 300
+  padding 0.5rem 1.4rem .5rem 2.2rem
+  border 1px solid $dark-charcoal-color
+  border-radius 5px
+  width 230px
+  max-width 100%
+  background url("../img/glass.svg") 2% 50% no-repeat, url("../img/arrow-up.svg") 96% 50% no-repeat
+
+  ::placeholder
+    color $chinese-silver-color
+
+.drawer
+  width 300px
+  left 0
+  bottom 0
+  position fixed
+  top 0
+  z-index 1500
+  background-color $lotion-color
+  padding 1.8rem 1rem 2.2rem
+  display flex
+  flex-direction column
+  justify-content space-between
+  overflow-y auto
+  transition all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+  &-top
+    margin-bottom 4rem
+
+  &--active
+    left 0 !important
+
+.localisation-block
+  margin-bottom 2.1rem
+
+  .select-city
+    margin-right 2.5rem
+
+.contacts-block
+  display flex
+  align-items center
+  flex-wrap wrap
+
+.nav
+  list-style none
+  padding-left 0
+
+  &__list
+    padding-top .75rem
+    padding-bottom .75rem
+
+  &__link
+    text-decoration none
+    font-weight 300
+    text-transform uppercase
+    color $dark-charcoal-color
+
+
+/* MAIN SECTION STYLES */
+
+.doctors-list-section
+  display grid
+  grid-template-columns 1fr 1fr
+  grid-gap 1.5rem
+
+  &--checked
+    grid-template-columns 1fr
+
+    .doctor-card
+      grid-template-columns 130px 1fr
+
+      &__description
+        margin-bottom 0
+
+      &__content
+        display grid
+        grid-template-columns 1fr 250px
+        column-gap 2rem
+
+        .btn-secondary
+          max-width 100%
+
+      &__info
+        order -1
+        margin-top 0
+        margin-bottom 2.2rem
+
+.doctor-card
+  display grid
+  grid-template-columns minmax(130px, 245px) 1fr
+  background-color $bubbles-color
+
+  &-status
+    display flex
+    flex-direction column
+
+    &--mobile
+      display none
+
+  &__photo
+    background-position center
+    background-size cover
+
+  &__content
+    flex-grow 1
+    padding 1.4rem
+
+    .btn-secondary
+      max-width 120px
+
+  &__name
+    font-weight 500
+    font-size 18px
+    line-height 120%
+    margin-bottom .9rem
+
+  &__speciality
+    font-weight 500
+    font-size 14px
+    color $tiffany-blue-color
+    margin-bottom 1.5rem
+
+  &__description
+    font-weight 300
+    margin-bottom 1.8rem
+
+  &__info
+    margin-top 1.6rem
+    display flex
+    align-items center
+    justify-content space-between
+    min-width 240px
+
+.rating-block
+  color $vivid-red-color
+  font-size 1.6rem
+
+.experience-block
+  display flex
+  align-items center
+
+  &__digit
+    display flex
+    align-items center
+    justify-content center
+    color $white-color
+    background-color $tiffany-blue-color
+    font-weight 500
+    border-radius 50%
+    width 30px
+    min-width 30px
+    height 30px
+    margin-right .4rem
+
+  &__text
+    font-weight 300
+
+
+/* HEADER STYLES */
+
+.header-panel
+  display grid
+  grid-template-columns 1fr 1fr
+
+  &__heading
+    font-size 24px
+    margin-bottom 0
+    line-height 1.7
+
+.header-control-panel
+  margin-left .75rem
+  display flex
+  align-items center
+
+  .switch-block
+    margin-left auto
+
+.select-sorting
+  margin-right 2rem
+  font-weight 500
+
+.breadcrumb
+  display flex
+  flex-wrap wrap
+  padding 0 0
+  margin-bottom 0
+  list-style none
+
+  &-item
+    a
+      text-decoration none
+      color $dark-charcoal-color
+      font-weight 300
+
+  &-item + .breadcrumb-item
+    padding-left .3rem
+    font-weight 300
+
+  &-item + .breadcrumb-item::before
+    float left
+    padding-right .2rem
+    color #6c757d
+    content var(--bs-breadcrumb-divider, "/")
+
+//Custom switch styles
+label, .toggle
+  height 40px
+  border-radius 5px
+
+label
+  width 100%
+  background-color $lotion-color
+  border-radius 5px
+  position relative
+  cursor pointer
+
+.custom-switch
+  width 100px
+  height 40px
+
+.toggle
+  position absolute
+  width 50%
+  background-color $vivid-red-color
+  transition transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+.view
+  width 100%
+  height 100%
+  position absolute
+  display flex
+  user-select none
+
+.grid
+  width 50%
+  display flex
+  justify-content center
+  align-items center
+
+.list
+  width 50%
+  display flex
+  justify-content center
+  align-items center
+
+[type="checkbox"]
+  display none
+
+[type="checkbox"]:checked + .custom-switch .toggle
+  transform translateX(100%)
+  background-color $vivid-red-color
+
+[type="checkbox"]:checked + .custom-switch .grid svg rect
+  stroke $white-color
+
+[type="checkbox"]:not(:checked) + .custom-switch .list svg path
+  fill $white-color
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1440px)
+  .footer
+    font-size 14px
+
+    .link
+      margin-left 1rem
+
+@media (max-width: 1366px)
+  .doctor-card
+    &__photo
+      //width 180px
+      //min-width 180px
+  .footer
+    :not(.btn)
+      display none
+
+    .btn-primary
+      margin 0 auto
+
+@media (max-width: 1200px)
+  .header-control-panel
+    .btn-sorting
+      display block
+
+    :not(.btn-sorting)
+      display none
+
+  .doctors-list-section
+    grid-template-columns 1fr
+
+    .doctor-card
+      grid-template-columns 130px 1fr
+
+      &__description
+        margin-bottom 0
+
+      &__content
+        display grid
+        grid-template-columns 1fr 250px
+        column-gap 2rem
+
+        .btn-secondary
+          max-width 100%
+
+      &__info
+        order -1
+        margin-top 0
+        margin-bottom 2.2rem
+
+@media (max-width: 992px)
+  .btn-menu
+    display block
+
+  .header
+    margin-left 0
+    width 100%
+
+  .page-container
+    margin-left 0
+
+  .drawer
+    left -300px
+
+  .footer
+    margin-left 0
+
+@media (max-width: 768px)
+  .doctors-list-section
+    row-gap .9rem
+
+    .doctor-card
+      grid-template-columns 100px 1fr
+      padding 1rem
+
+      &__photo
+        min-height 100px
+
+      &__name
+        font-size 14px
+
+      &__info
+        order 0
+        margin-top .8rem
+        margin-bottom 0
+
+      &__content
+        grid-template-columns 1fr
+        padding 0 0.8rem
+
+      &-status
+        display none
+
+        &--mobile
+          display flex
+          grid-column 1 / 3
+          margin-top .8rem
+
+
+@media (max-width: 576px)
+  .drawer
+    width 260px
+
+  .header-panel
+    &__heading
+      font-size 18px
+
+  .header-top
+    margin-bottom 1.3rem
+
+  .page-container
+    margin-top 122px
+
+  .btn-signup
+    margin-right 0
+
+  .contacts-block
+    .link-phone
+      margin-top 1.5rem

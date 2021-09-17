@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Meds</title>
+</head>
+
+<body>
+<div class="layout">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-top">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" title="Вернуться на главную">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Хирургия</li>
+                </ol>
+            </nav>
+            <button class="btn btn-menu">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.0001 0L5.60181 15L15.0001 30C23.2844 30 30.0001 23.2843 30.0001 15C30.0001 6.71572 23.2844 0 15.0001 0Z"
+                          fill="#0FABBC"/>
+                    <path d="M0 15C0 23.2843 6.71572 30 15 30V0C6.71572 0 0 6.71572 0 15Z" fill="#12CAD6"/>
+                    <path d="M7.73438 16.7578H13.2422V22.2656H7.73438V16.7578Z" fill="#FA1616"/>
+                    <path d="M7.73438 7.73438H13.2422V13.2422H7.73438V7.73438Z" fill="#FA1616"/>
+                    <path d="M16.7578 16.7578H22.2656V22.2656H16.7578V16.7578Z" fill="#FA1616"/>
+                    <path d="M16.7578 7.73438H22.2656V13.2422H16.7578V7.73438Z" fill="#FA1616"/>
+                </svg>
+            </button>
+        </div>
+        <div class="header-panel">
+            <h1 class="header-panel__heading">Хирургия</h1>
+            <div class="header-control-panel">
+                <button class="btn btn-sorting" title="Фильтровать">Сортировка</button>
+                <select class="select-sorting" title="Сортировать">
+                    <option>Сортировка</option>
+                </select>
+                <button class="btn btn-filter" title="Фильтровать">Фильтр</button>
+                <div class="switch-block">
+                    <input type="checkbox" id="switch" checked>
+                    <div class="custom-switch">
+                        <label for="switch">
+                            <span class="toggle"></span>
+                            <span class="view">
+                                <span title="List view" class="list">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.4388 11.7758H10.1492C9.7489 11.7758 9.42139 12.1034 9.42139 12.5037C9.42139 12.9039 9.7489 13.2315 10.1492 13.2315H23.4388C23.8391 13.2315 24.1666 12.9039 24.1666 12.5037C24.1666 12.1034 23.8464 11.7758 23.4388 11.7758Z"
+                                              fill="#333333"/>
+                                        <path d="M4.21729 9.11938C2.34684 9.11938 0.833008 10.6332 0.833008 12.5037C0.833008 14.3741 2.34684 15.8879 4.21729 15.8879C6.08774 15.8879 7.60157 14.3741 7.60157 12.5037C7.60157 10.6332 6.08774 9.11938 4.21729 9.11938ZM4.21729 14.4323C3.14742 14.4323 2.28861 13.5663 2.28861 12.5037C2.28861 11.4338 3.1547 10.575 4.21729 10.575C5.27988 10.575 6.14596 11.4411 6.14596 12.5037C6.14596 13.5663 5.27988 14.4323 4.21729 14.4323Z"
+                                              fill="#333333"/>
+                                        <path d="M23.4388 2.67831H10.1492C9.7489 2.67831 9.42139 3.00583 9.42139 3.40612C9.42139 3.80641 9.7489 4.13392 10.1492 4.13392H23.4388C23.8391 4.13392 24.1666 3.80641 24.1666 3.40612C24.1666 3.00583 23.8464 2.67831 23.4388 2.67831Z"
+                                              fill="#333333"/>
+                                        <path d="M4.21729 0C2.34684 0 0.833008 1.51383 0.833008 3.38428C0.833008 5.25473 2.34684 6.76856 4.21729 6.76856C6.08774 6.76856 7.60157 5.25473 7.60157 3.38428C7.60157 1.52111 6.08774 0.00727802 4.21729 0ZM4.21729 5.32023C3.14742 5.32023 2.28861 4.45415 2.28861 3.39156C2.28861 2.32897 3.1547 1.46288 4.21729 1.46288C5.28716 1.46288 6.14596 2.32897 6.14596 3.39156C6.14596 4.45415 5.27988 5.32023 4.21729 5.32023Z"
+                                              fill="#333333"/>
+                                        <path d="M23.4388 20.8734H10.1492C9.7489 20.8734 9.42139 21.2009 9.42139 21.6012C9.42139 22.0014 9.7489 22.329 10.1492 22.329H23.4388C23.8391 22.329 24.1666 22.0014 24.1666 21.6012C24.1666 21.2009 23.8464 20.8734 23.4388 20.8734Z"
+                                              fill="#333333"/>
+                                        <path d="M4.21729 18.2314C2.34684 18.2314 0.833008 19.7453 0.833008 21.6157C0.833008 23.4862 2.34684 25 4.21729 25C6.08774 25 7.60157 23.4862 7.60157 21.6157C7.60157 19.7526 6.08774 18.2314 4.21729 18.2314ZM4.21729 23.5517C3.14742 23.5517 2.28861 22.6856 2.28861 21.623C2.28861 20.5531 3.1547 19.6943 4.21729 19.6943C5.28716 19.6943 6.14596 20.5604 6.14596 21.623C6.14596 22.6856 5.27988 23.5517 4.21729 23.5517Z"
+                                              fill="#333333"/>
+                                    </svg>
+                                </span>
+                                <span title="Grid view" class="grid">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="10" height="10" stroke="#333333"/>
+                                        <rect x="0.5" y="13.5" width="10" height="10" stroke="#333333"/>
+                                        <rect x="13.5" y="0.5" width="10" height="10" stroke="#333333"/>
+                                        <rect x="13.5" y="13.5" width="10" height="10" stroke="#333333"/>
+                                    </svg>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="page-container">
+        <main class="page">
+            <section class="doctors-list-section">
+                <div class="doctor-card">
+                    <div
+                            class="doctor-card__photo"
+                            style="background-image: url('./img/doc-1.png')"
+                    >
+                    </div>
+                    <div class="doctor-card__content">
+                        <div class="doctor-card-bio">
+                            <h2 class="doctor-card__name">Юсеф Рами Мухаммедович</h2>
+                            <h3 class="doctor-card__speciality">Уролог, Эндоскопист, Хирург</h3>
+                            <p class="doctor-card__description">Врач высшей категории. Кандидат медицинских наук.</p>
+                        </div>
+
+                        <div class="doctor-card-status">
+                            <button class="btn btn-secondary">Подробнее</button>
+                            <div class="doctor-card__info">
+                                <div class="experience-block">
+                                    <span class="experience-block__digit">20</span>
+                                    <span class="experience-block__text">лет опыта</span>
+                                </div>
+                                <div class="rating-block" data-rate-value="4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-card-status doctor-card-status--mobile">
+                        <div class="rating-block" data-rate-value="4"></div>
+                        <div class="doctor-card__info">
+                            <div class="experience-block">
+                                <span class="experience-block__digit">20</span>
+                                <span class="experience-block__text">лет опыта</span>
+                            </div>
+                            <button class="btn btn-secondary">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div
+                            class="doctor-card__photo"
+                            style="background-image: url('./img/doc-2.png')"
+                    >
+                    </div>
+                    <div class="doctor-card__content">
+                        <div class="doctor-card-bio">
+                            <h2 class="doctor-card__name">Юсеф Рами Мухаммедович</h2>
+                            <h3 class="doctor-card__speciality">Уролог, Эндоскопист, Хирург</h3>
+                            <p class="doctor-card__description">Врач высшей категории. Кандидат медицинских наук.</p>
+                        </div>
+
+                        <div class="doctor-card-status">
+                            <button class="btn btn-secondary">Подробнее</button>
+                            <div class="doctor-card__info">
+                                <div class="experience-block">
+                                    <span class="experience-block__digit">20</span>
+                                    <span class="experience-block__text">лет опыта</span>
+                                </div>
+                                <div class="rating-block" data-rate-value="3.5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-card-status doctor-card-status--mobile">
+                        <div class="rating-block" data-rate-value="4"></div>
+                        <div class="doctor-card__info">
+                            <div class="experience-block">
+                                <span class="experience-block__digit">20</span>
+                                <span class="experience-block__text">лет опыта</span>
+                            </div>
+                            <button class="btn btn-secondary">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div
+                            class="doctor-card__photo"
+                            style="background-image: url('./img/doc-3.png')"
+                    >
+                    </div>
+                    <div class="doctor-card__content">
+                        <div class="doctor-card-bio">
+                            <h2 class="doctor-card__name">Юсеф Рами Мухаммедович</h2>
+                            <h3 class="doctor-card__speciality">Уролог, Эндоскопист, Хирург</h3>
+                            <p class="doctor-card__description">Врач высшей категории. Кандидат медицинских наук.</p>
+                        </div>
+
+                        <div class="doctor-card-status">
+                            <button class="btn btn-secondary">Подробнее</button>
+                            <div class="doctor-card__info">
+                                <div class="experience-block">
+                                    <span class="experience-block__digit">20</span>
+                                    <span class="experience-block__text">лет опыта</span>
+                                </div>
+                                <div class="rating-block" data-rate-value="2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-card-status doctor-card-status--mobile">
+                        <div class="rating-block" data-rate-value="4"></div>
+                        <div class="doctor-card__info">
+                            <div class="experience-block">
+                                <span class="experience-block__digit">20</span>
+                                <span class="experience-block__text">лет опыта</span>
+                            </div>
+                            <button class="btn btn-secondary">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div
+                            class="doctor-card__photo"
+                            style="background-image: url('./img/doc-4.png')"
+                    >
+                    </div>
+                    <div class="doctor-card__content">
+                        <div class="doctor-card-bio">
+                            <h2 class="doctor-card__name">Юсеф Рами Мухаммедович</h2>
+                            <h3 class="doctor-card__speciality">Уролог, Эндоскопист, Хирург</h3>
+                            <p class="doctor-card__description">Врач высшей категории. Кандидат медицинских наук.</p>
+                        </div>
+
+                        <div class="doctor-card-status">
+                            <button class="btn btn-secondary">Подробнее</button>
+                            <div class="doctor-card__info">
+                                <div class="experience-block">
+                                    <span class="experience-block__digit">20</span>
+                                    <span class="experience-block__text">лет опыта</span>
+                                </div>
+                                <div class="rating-block" data-rate-value="5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-card-status doctor-card-status--mobile">
+                        <div class="rating-block" data-rate-value="4"></div>
+                        <div class="doctor-card__info">
+                            <div class="experience-block">
+                                <span class="experience-block__digit">20</span>
+                                <span class="experience-block__text">лет опыта</span>
+                            </div>
+                            <button class="btn btn-secondary">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div
+                            class="doctor-card__photo"
+                            style="background-image: url('./img/doc-5.png')"
+                    >
+                    </div>
+                    <div class="doctor-card__content">
+                        <div class="doctor-card-bio">
+                            <h2 class="doctor-card__name">Юсеф Рами Мухаммедович</h2>
+                            <h3 class="doctor-card__speciality">Уролог, Эндоскопист, Хирург</h3>
+                            <p class="doctor-card__description">Врач высшей категории. Кандидат медицинских наук.</p>
+                        </div>
+
+                        <div class="doctor-card-status">
+                            <button class="btn btn-secondary">Подробнее</button>
+                            <div class="doctor-card__info">
+                                <div class="experience-block">
+                                    <span class="experience-block__digit">20</span>
+                                    <span class="experience-block__text">лет опыта</span>
+                                </div>
+                                <div class="rating-block" data-rate-value="4.5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-card-status doctor-card-status--mobile">
+                        <div class="rating-block" data-rate-value="4"></div>
+                        <div class="doctor-card__info">
+                            <div class="experience-block">
+                                <span class="experience-block__digit">20</span>
+                                <span class="experience-block__text">лет опыта</span>
+                            </div>
+                            <button class="btn btn-secondary">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div
+                            class="doctor-card__photo"
+                            style="background-image: url('./img/doc-6.png')"
+                    >
+                    </div>
+                    <div class="doctor-card__content">
+                        <div class="doctor-card-bio">
+                            <h2 class="doctor-card__name">Юсеф Рами Мухаммедович</h2>
+                            <h3 class="doctor-card__speciality">Уролог, Эндоскопист, Хирург</h3>
+                            <p class="doctor-card__description">Врач высшей категории. Кандидат медицинских наук.</p>
+                        </div>
+
+                        <div class="doctor-card-status">
+                            <button class="btn btn-secondary">Подробнее</button>
+                            <div class="doctor-card__info">
+                                <div class="experience-block">
+                                    <span class="experience-block__digit">20</span>
+                                    <span class="experience-block__text">лет опыта</span>
+                                </div>
+                                <div class="rating-block" data-rate-value="4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-card-status doctor-card-status--mobile">
+                        <div class="rating-block" data-rate-value="4"></div>
+                        <div class="doctor-card__info">
+                            <div class="experience-block">
+                                <span class="experience-block__digit">20</span>
+                                <span class="experience-block__text">лет опыта</span>
+                            </div>
+                            <button class="btn btn-secondary">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <span>Отдел сотрудничества и рекламы:</span>
+        <a class="link" href="tel:+380000000000" title="Позвонить">+3 8 (000) 000 00 00</a>
+        <a class="link" href="tel:+380000000000" title="Позвонить">+3 8 (000) 000 00 00</a>
+        <button class="btn btn-primary btn-xl">Регистрация</button>
+    </footer>
+
+    <!-- LEFT DRAWER -->
+    <aside class="drawer">
+        <div class="drawer-top">
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="auth-block">
+                <button class="btn btn-signup" title="Зарегистрироваться">Регистрация</button>
+                <button class="btn btn-login" title="Выполнить вход">Вход</button>
+            </div>
+
+            <div class="search-block">
+                <input class="search-input" type="search" placeholder="Специальность врача"
+                       title="Поиск по специальности">
+            </div>
+
+            <hr>
+
+            <nav>
+                <ul class="nav">
+                    <li class="nav__list">
+                        <a class="nav__link" href="#">Врачи</a>
+                    </li>
+                    <li class="nav__list">
+                        <a class="nav__link" href="#">Клиники</a>
+                    </li>
+                    <li class="nav__list">
+                        <a class="nav__link" href="#">Диагностика</a>
+                    </li>
+                    <li class="nav__list">
+                        <a class="nav__link" href="#">о проекте</a>
+                    </li>
+                    <li class="nav__list">
+                        <a class="nav__link" href="#">Новости</a>
+                    </li>
+                    <li class="nav__list">
+                        <a class="nav__link" href="#">справочник</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="drawer-bottom">
+            <div class="localisation-block">
+                <select class="select-city" title="Город">
+                    <option>Краматорск</option>
+                    <option>Харьков</option>
+                </select>
+                <select class="select-lang" title="Язык">
+                    <option>Ru</option>
+                    <option>Uk</option>
+                    <option>En</option>
+                </select>
+            </div>
+            <div class="contacts-block">
+                <a class="link link-instagram" target="_blank" href="#" title="Instagram">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.8926 12.5C14.8926 13.8214 13.8214 14.8926 12.5 14.8926C11.1786 14.8926 10.1074 13.8214 10.1074 12.5C10.1074 11.1786 11.1786 10.1074 12.5 10.1074C13.8214 10.1074 14.8926 11.1786 14.8926 12.5Z"
+                              fill="#D8D8D8"/>
+                        <path d="M18.0954 8.26682C17.9804 7.95516 17.7969 7.67307 17.5585 7.44151C17.327 7.20309 17.0451 7.01961 16.7332 6.90459C16.4803 6.80637 16.1003 6.68945 15.4005 6.65759C14.6435 6.62307 14.4165 6.61563 12.5 6.61563C10.5833 6.61563 10.3564 6.62288 9.59953 6.6574C8.89972 6.68945 8.51958 6.80637 8.26686 6.90459C7.95501 7.01961 7.67291 7.20309 7.44155 7.44151C7.20313 7.67307 7.01965 7.95497 6.90444 8.26682C6.80621 8.51974 6.68929 8.89987 6.65744 9.59968C6.62292 10.3565 6.61548 10.5835 6.61548 12.5002C6.61548 14.4167 6.62292 14.6437 6.65744 15.4007C6.68929 16.1005 6.80621 16.4804 6.90444 16.7334C7.01965 17.0452 7.20294 17.3271 7.44136 17.5587C7.67291 17.7971 7.95482 17.9806 8.26667 18.0956C8.51958 18.194 8.89972 18.3109 9.59953 18.3428C10.3564 18.3773 10.5831 18.3845 12.4998 18.3845C14.4167 18.3845 14.6437 18.3773 15.4003 18.3428C16.1002 18.3109 16.4803 18.194 16.7332 18.0956C17.3592 17.8541 17.854 17.3593 18.0954 16.7334C18.1937 16.4804 18.3106 16.1005 18.3426 15.4007C18.3771 14.6437 18.3844 14.4167 18.3844 12.5002C18.3844 10.5835 18.3771 10.3565 18.3426 9.59968C18.3108 8.89987 18.1938 8.51974 18.0954 8.26682ZM12.5 16.1858C10.4643 16.1858 8.81408 14.5357 8.81408 12.5C8.81408 10.4643 10.4643 8.81423 12.5 8.81423C14.5356 8.81423 16.1858 10.4643 16.1858 12.5C16.1858 14.5357 14.5356 16.1858 12.5 16.1858ZM16.3315 9.52987C15.8558 9.52987 15.4702 9.1442 15.4702 8.66851C15.4702 8.19282 15.8558 7.80715 16.3315 7.80715C16.8072 7.80715 17.1929 8.19282 17.1929 8.66851C17.1927 9.1442 16.8072 9.52987 16.3315 9.52987Z"
+                              fill="#D8D8D8"/>
+                        <path d="M12.5 0C5.5975 0 0 5.5975 0 12.5C0 19.4025 5.5975 25 12.5 25C19.4025 25 25 19.4025 25 12.5C25 5.5975 19.4025 0 12.5 0ZM19.6344 15.4593C19.5997 16.2233 19.4782 16.745 19.3008 17.2016C18.928 18.1658 18.1658 18.928 17.2016 19.3008C16.7452 19.4782 16.2233 19.5995 15.4594 19.6344C14.694 19.6693 14.4495 19.6777 12.5002 19.6777C10.5507 19.6777 10.3064 19.6693 9.54075 19.6344C8.77686 19.5995 8.255 19.4782 7.79858 19.3008C7.31945 19.1206 6.88572 18.8381 6.52714 18.4729C6.16207 18.1145 5.87959 17.6805 5.69935 17.2016C5.52197 16.7452 5.40047 16.2233 5.36575 15.4594C5.33047 14.6938 5.32227 14.4493 5.32227 12.5C5.32227 10.5507 5.33047 10.3062 5.36556 9.54075C5.40028 8.77666 5.52158 8.255 5.69897 7.79839C5.87921 7.31945 6.16188 6.88553 6.52714 6.52714C6.88553 6.16188 7.31945 5.8794 7.79839 5.69916C8.255 5.52177 8.77666 5.40047 9.54075 5.36556C10.3062 5.33066 10.5507 5.32227 12.5 5.32227C14.4493 5.32227 14.6938 5.33066 15.4593 5.36575C16.2233 5.40047 16.745 5.52177 17.2016 5.69897C17.6805 5.87921 18.1145 6.16188 18.4731 6.52714C18.8381 6.88572 19.1208 7.31945 19.3008 7.79839C19.4784 8.255 19.5997 8.77666 19.6346 9.54075C19.6695 10.3062 19.6777 10.5507 19.6777 12.5C19.6777 14.4493 19.6695 14.6938 19.6344 15.4593Z"
+                              fill="#D8D8D8"/>
+                    </svg>
+                </a>
+                <a class="link link-facebook" target="_blank" href="#" title="Facebook">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 0C5.59642 0 0 5.59642 0 12.5C0 19.4036 5.59642 25 12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59642 19.4036 0 12.5 0ZM17.2688 6.36573L15.5399 6.3665C14.1841 6.3665 13.922 7.01074 13.922 7.95601V10.0404H17.155L17.1535 13.3051H13.9223V21.6831H10.5501V13.3051H7.7312V10.0404H10.5501V7.63274C10.5501 4.83862 12.2573 3.31688 14.7496 3.31688L17.2691 3.32072V6.36573H17.2688Z"
+                              fill="#D8D8D8"/>
+                    </svg>
+                </a>
+                <a class="link link-phone" href="tel:+380000000000" title="Позвонить">+3 8 (000) 000 00 00</a>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<!-- JQuery CDN-->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+
+<!-- Star rating plugin script-->
+<script src="./js/rater.min.js"></script>
+
+<!-- Main js script-->
+<script src="./js/script.js"></script>
+</body>
+</html>
